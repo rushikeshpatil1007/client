@@ -9,7 +9,7 @@ const Table = () => {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [error, setError] = useState(null); // New state for handling errors
-
+// Axios get request  for get the data
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +26,7 @@ const Table = () => {
 
     fetchData();
   }, []);
-
+// serch by username 
   useEffect(() => {
     if (searchQuery.trim() === '') {
       setFilteredData(data);
